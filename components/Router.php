@@ -37,18 +37,21 @@ class Router
                 $controllerName = ucfirst(array_shift($segments).'Controller');
                 $actionName = 'action'.ucfirst(array_shift($segments));
 
+                $parameters = $segments;
                 $controllerFile = ROOT.'/controllers/'.$controllerName.'.php';
 
                 if(file_exists($controllerFile)){
                     include_once ($controllerFile);
                 }
-                // Саоздаем объект, вызвать метод
+                // Создаем объект, вызвать метод
 
                 $controllerObject = new $controllerName;
 
-                if($controllerObject->$actionName() != null){
+                if(call_user_func(array($controllerObject,$actionName),$parameters)){
                     break;
                 }
+            }else{
+                include_once (ROOT.'/404.html');
             }
         }
 
