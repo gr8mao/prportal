@@ -7,8 +7,8 @@
  */
 
 return array(
-    'host' => '',
-    'dbname' => '',
-    'user' => '',
-    'password' => ''
+    'host' => 'localhost',
+    'dbname' => 'prportal',
+    'user' => 'root',
+    'password' => 'root'
 );

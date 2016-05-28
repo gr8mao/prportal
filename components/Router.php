@@ -31,29 +31,33 @@ class Router
         // Проверяем наличие запроса
 
         foreach($this->routes as $uriPattern => $path){
-            if (preg_match("~$uriPattern~",$uri)){
-                $segments = explode('/',$path);
+            if (preg_match("~$uriPattern~",$uri)) { // посмотреть preg_match, есть баги с uri (dsfjshdjhomesdjhf - работает, home/ - не работает)
+                $segments = explode('/', $path);
 
-                $controllerName = ucfirst(array_shift($segments).'Controller');
-                $actionName = 'action'.ucfirst(array_shift($segments));
+                $controllerName = ucfirst(array_shift($segments) . 'Controller');
+                $actionName = 'action' . ucfirst(array_shift($segments));
 
                 $parameters = $segments;
-                $controllerFile = ROOT.'/controllers/'.$controllerName.'.php';
+                $controllerFile = ROOT . '/controllers/' . $controllerName . '.php';
 
-                if(file_exists($controllerFile)){
-                    include_once ($controllerFile);
+                if (file_exists($controllerFile)) {
+                    include_once($controllerFile);
                 }
                 // Создаем объект, вызвать метод
 
                 $controllerObject = new $controllerName;
 
-                if(call_user_func(array($controllerObject,$actionName),$parameters)){
+                $result = call_user_func(array($controllerObject, $actionName), $parameters);
+
+                if ($result) {
                     break;
                 }
-            }else{
-                include_once (ROOT.'/404.html');
             }
         }
+        if ($result == null){
+            require_once (ROOT.'/404.html');
+        }
+
 
         // Подключение файла класса-контроллера
     }

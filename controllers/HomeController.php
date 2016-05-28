@@ -13,4 +13,10 @@ class HomeController
         require_once (ROOT.'/index.html');
         return true;
     }
+
+    public function actionAbout(){
+
+        require_once (ROOT.'/about.html');
+        return true;
+    }
 }
