@@ -1,7 +1,5 @@
 <?php
 
-include_once ROOT.'/models/Article.php';
-
 /**
  * Created by PhpStorm.
  * User: maksimbelov
