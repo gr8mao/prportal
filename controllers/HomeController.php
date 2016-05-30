@@ -10,13 +10,13 @@ class HomeController
 {
     public function actionIndex(){
 
-        require_once (ROOT.'/index.html');
+        require_once (ROOT.'/views/home/index.php');
         return true;
     }
 
     public function actionAbout(){
 
-        require_once (ROOT.'/about.html');
+        require_once (ROOT.'/views/home/about.php');
         return true;
     }
 }

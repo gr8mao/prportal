@@ -1,6 +1,4 @@
 <?php
-
-include_once ROOT.'/components/Db.php';
 /**
  * Created by PhpStorm.
  * User: maksimbelov
@@ -10,22 +8,34 @@ include_once ROOT.'/components/Db.php';
 
 class Article
 {
-    public static $COUNT_BY_DEFULT = 10;
 
     public static function getArticles(){
         $db = Db::getConnection();
 
-        $query = "SELECT * FROM `Articles`";
+        $query = "SELECT * FROM `Articles` ORDER BY `id` DESC";
 
-//        $db->prepare($query);
         $query = $db->query($query);
 
         $result = $query->fetchAll();
 
-        print_r($result);
-
-        die;
-
         return $result;
+    }
+
+    public static function saveArticle($title,$content,$author){
+        $db = Db::getConnection();
+
+        if($db){
+
+            $query = "INSERT INTO `Articles`(`Title`,`Content`,`Author`,`Date`) VALUES (:title,:content,:author,".date('y-m-d').")";
+
+            $result = $db->prepare($query);
+            $result->bindParam(':title',$title,PDO::PARAM_STR);
+            $result->bindParam(':content',$content,PDO::PARAM_STR);
+            $result->bindParam(':author',$author,PDO::PARAM_STR);
+
+            $result = $result->execute();
+
+            return $result;
+        }
     }
 }

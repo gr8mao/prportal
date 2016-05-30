@@ -22,20 +22,20 @@
 <!-- Main container -->
 <div class="page-container">
     
-<!-- bloc-0 -->
-<div class="bloc bgc-white l-bloc sticky-nav" id="bloc-0">
+<!-- top -->
+<div class="bloc sticky-nav bgc-white l-bloc" id="top">
 	<div class="container">
 		<nav class="navbar row">
 			<div class="navbar-header">
-				<a class="navbar-brand" href="index.html"><img src="img/pr_horiz.svg" alt="logo" height="50" /></a>
+				<a class="navbar-brand" href="trash/index.html" id="logo-top"><img src="img/pr_horiz.svg" alt="logo" height="50" /></a>
 				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
 					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
 				</button>
 			</div>
 			<div class="navbar-collapse navbar-1 collapse">
-				<ul class="site-navigation nav navbar-nav list-sp-md list-unstyled">
+				<ul class="site-navigation nav navbar-nav list-sp-md list-unstyled" id="menu">
 					<li>
-						<a href="index.html">Главная</a>
+						<a href="trash/index.html">Студенческий PR-портал</a>
 					</li>
 					<li>
 						<a href="events.html">События</a>
@@ -57,107 +57,143 @@
 		</nav>
 	</div>
 </div>
-<!-- bloc-0 END -->
+<!-- top END -->
 
 <!-- bloc-10 -->
 <div class="bloc b-parallax l-bloc books-bloc bgc-white" id="bloc-10">
 	<div class="container bloc-lg">
-		<div class="row">
+		<div class="row hidden-xs">
 			<div class="col-sm-6">
 				<h1 class="mg-md tc-white">
 					<span class="feather-icon icon-book"></span> Книги
 				</h1>
 			</div>
 			<div class="col-sm-6">
-				<a href="index.html" class="btn    btn-lg pull-right btn-white"><span class="feather-icon icon-plus icon-spacer"></span>Добавить книгу</a>
+				<a href="submit.html" class="btn    btn-lg pull-right btn-white hidden-xs"><span class="feather-icon icon-plus icon-spacer"></span>Добавить книгу</a>
 			</div>
 		</div>
 		<div class="row voffset">
-			<a href="books-info-example.html">
+			<div class="col-sm-12">
+				<h1 class="mg-md tc-white text-center hidden-sm hidden-lg hidden-md">
+					<span class="feather-icon icon-book"></span> Книги
+				</h1>
+			</div>
+		</div>
+		<div class="row voffset">
 			<div class="col-sm-3">
 				<div class="panel" id="movie1">
 					<div class="panel-heading">
-						<img src="img/book1.jpg" class="mg-sm center-block img-responsive" id="movie1cover" />
+						<a href="book1.html"><img src="img/book1.jpg" class="mg-sm center-block img-responsive" id="movie1cover" /></a>
 						<div class="form-group">
 							<label>
-								Ганапольский М.
+								С. Алексиевич
 							</label>
 						</div>
-						<h3 class="mg-clear text-center" id="movie1name">
+						<h4 class="mg-clear text-center">
 							Время Сэконд Хэнд
-						</h3>
+						</h4>
 					</div>
 					<div class="panel-body">
 						<div class="text-center">
-							<a href="books-info-example.html" class="btn  btn-d btn-rd" id="movie1button">Подробнее...</a>
+							<a href="book1.html" class="btn  btn-d btn-rd" id="movie1button">Подробнее...</a>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="panel-heading">
+						<a href="book5.html"><img src="img/book5.jpg" class="mg-sm center-block img-responsive" id="movie1cover" /></a>
+						<div class="form-group">
+							<label>
+								Х. Томпсон
+							</label>
+						</div>
+						<h4 class="mg-clear text-center">
+							Страх и отвращение в Лас-Вегасе
+						</h4>
+					</div>
+					<div class="panel-body">
+						<div class="text-center">
+							<a href="book5.html" class="btn  btn-d btn-rd" id="movie1button">Подробнее...</a>
 						</div>
 					</div>
 				</div>
 			</div>
-						</a>
-			<a href="books-info-example.html">
 			<div class="col-sm-3">
 				<div class="panel" id="movie2">
 					<div class="panel-heading" id="movie2heading">
-						<img src="img/book2.jpg" class="mg-sm center-block img-responsive" id="movie2cover" />
+						<a href="book2.html"><img src="img/book2.jpg" class="mg-sm center-block img-responsive" id="movie2cover" /></a>
 						<div class="form-group">
 							<label>
-								Ганапольский М.
+								Д. Огилви
 							</label>
 						</div>
-						<h3 class="mg-clear text-center" id="movie2name">
-							название
-						</h3>
+						<h4 class="mg-clear text-center">
+							О рекламе
+						</h4>
 					</div>
 					<div class="panel-body">
 						<div class="text-center">
-							<a href="books-info-example.html" class="btn  btn-d btn-rd" id="movie2button">Подробнее...</a>
+							<a href="book2.html" class="btn  btn-d btn-rd" id="movie2button">Подробнее...</a>
+						</div>
+					</div>
+				</div>
+				<div class="panel">
+					<div class="panel-heading" id="movie2heading">
+						<a href="book6.html"><img src="img/book6.jpg" class="mg-sm center-block img-responsive" id="movie2cover" /></a>
+						<div class="form-group">
+							<label>
+								Силиг Т.
+							</label>
+						</div>
+						<h4 class="mg-clear text-center">
+							Почему никто не рассказал мне это в 20?
+						</h4>
+					</div>
+					<div class="panel-body">
+						<div class="text-center">
+							<a href="book6.html" class="btn  btn-d btn-rd" id="movie2button">Подробнее...</a>
 						</div>
 					</div>
 				</div>
 			</div>
-						</a>
-			<a href="books-info-example.html">
 			<div class="col-sm-3">
 				<div class="panel">
 					<div class="panel-heading" id="movie3">
-						<img src="img/book3.jpg" class="mg-sm center-block img-responsive" id="movie3cover" />
+						<a href="book3.html"><img src="img/book3.jpg" class="mg-sm center-block img-responsive" id="movie3cover" /></a>
 						<form id="form_1069" novalidate>
 							<div class="form-group">
 								<label>
-									Ганапольский М.
+									М. Ганапольский
 								</label>
 							</div>
 						</form>
-						<h3 class="mg-clear text-center" id="movie3name">
+						<h4 class="mg-clear text-center">
 							Кисло-сладкая журналистика
-						</h3>
+						</h4>
 					</div>
 					<div class="panel-body">
 						<div class="text-center">
-							<a href="books-info-example.html" class="btn  btn-d btn-rd" id="movie3button">Подробнее...</a>
+							<a href="book3.html" class="btn  btn-d btn-rd" id="movie3button">Подробнее...</a>
 						</div>
 					</div>
 				</div>
 			</div>
-						</a>
-			<a href="books-info-example.html">
 			<div class="col-sm-3">
 				<div class="panel" id="movie4">
 					<div class="panel-heading">
-						<img src="img/book4.jpg" class="mg-sm center-block img-responsive" id="movie4cover" />
+						<a href="book4.html"><img src="img/book4.jpg" class="mg-sm center-block img-responsive" id="movie4cover" /></a>
 						<div class="form-group">
 							<label>
-								Ганапольский М.
+								П. Лайнбарджер
 							</label>
 						</div>
-						<h3 class="mg-clear text-center" id="movie4name">
+						<h4 class="mg-clear text-center">
 							Психологическая война
-						</h3>
+						</h4>
 					</div>
 					<div class="panel-body">
 						<div class="text-center">
-							<a href="books-info-example.html" class="btn  btn-d btn-rd" id="movie4button">Подробнее...</a>
+							<a href="book4.html" class="btn  btn-d btn-rd" id="movie4button">Подробнее...</a>
 						</div>
 					</div>
 				</div>
@@ -172,27 +208,91 @@
 <!-- ScrollToTop Button END-->
 
 
-<!-- Footer - bloc-22 -->
-<div class="bloc bg-squared-d-bg bg-repeat bgc-outer-space d-bloc" id="bloc-22">
+<!-- Footer - bottom -->
+<div class="bloc bg-squared-d-bg bg-repeat bgc-outer-space d-bloc hidden-xs" id="bottom">
 	<div class="container bloc-sm">
 		<div class="row">
 			<div class="col-sm-4">
-				<p class="text-left mg-md">
+				<ul class="list-unstyled">
+					<li>
+						<a href="trash/index.html" class="a-btn a-block">Главная</a>
+					</li>
+					<li>
+						<a href="events.html" class="a-btn a-block">События</a>
+					</li>
+					<li>
+						<a href="movies.html" class="a-btn a-block">Фильмы</a>
+					</li>
+					<li>
+						<a href="books.html" class="a-btn a-block">Книги</a>
+					</li>
+					<li>
+						<a href="articles.html" class="a-btn a-block">Статьи</a>
+					</li>
+					<li>
+						<a href="about.html" class="a-btn a-block">О портале</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-sm-4">
+				<a href="trash/index.html"><img src="img/pr_logo-white.svg" class="img-responsive center-block animSpeedFast mg-sm" width="50" /></a>
+				<p class="text-left mg-md text-center">
 					<strong>Автор проекта:<br />Дехтярова Ирина,<br />студентка РСО-31</strong>
 				</p>
 			</div>
 			<div class="col-sm-4">
-				<a href="index.html"><img src="img/pr_logo-white.svg" class="img-responsive center-block mg-lg animLoopInfinite animated undefined animSpeedFast" width="50" /></a>
-			</div>
-			<div class="col-sm-4">
-				<h5 class="mg-md text-left tc-white text-right">
-					<span class="feather-icon icon-head"></span> Дехтярова Ирина
-				</h5><a href="index.html" class="btn  btn-d pull-right">Выйти</a>
+				<p class="text-left text-right mg-sm">
+					<strong>Разработка сайта:<br />VICIS Design</strong>
+				</p><a href="http://vicis.ru/" target="_blank"><img src="img/VICIS.svg" class="img-responsive pull-right mg-md" width="50" /></a>
 			</div>
 		</div>
 	</div>
 </div>
-<!-- Footer - bloc-22 END -->
+<!-- Footer - bottom END -->
+
+<!-- Footer - bloc-89 -->
+<div class="bloc bg-squared-d-bg bg-repeat bgc-outer-space d-bloc hidden-sm hidden-lg hidden-md" id="bloc-89">
+	<div class="container bloc-sm">
+		<div class="row">
+			<div class="col-sm-12 col-md-6 col-md-offset-3">
+				<ul class="list-unstyled">
+					<li>
+						<a href="trash/index.html" class="a-btn a-block">Главная</a>
+					</li>
+					<li>
+						<a href="events.html" class="a-btn a-block">События</a>
+					</li>
+					<li>
+						<a href="movies.html" class="a-btn a-block">Фильмы</a>
+					</li>
+					<li>
+						<a href="books.html" class="a-btn a-block">Книги</a>
+					</li>
+					<li>
+						<a href="articles.html" class="a-btn a-block">Статьи</a>
+					</li>
+					<li>
+						<a href="about.html" class="a-btn a-block">О портале</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="row voffset">
+			<div class="col-sm-6">
+				<a href="trash/index.html"><img src="img/pr_logo-white.svg" class="img-responsive center-block animSpeedFast mg-sm" width="50" /></a>
+				<p class="text-left mg-md text-center">
+					<strong>Автор проекта:<br />Дехтярова Ирина,<br />студентка РСО-31</strong>
+				</p>
+			</div>
+			<div class="col-sm-6">
+				<p class="text-left mg-sm text-center">
+					<strong>Разработка сайта:<br />VICIS Design</strong>
+				</p><a href="http://vicis.ru/" target="_blank"><img src="img/VICIS.svg" class="img-responsive mg-md center-block" width="50" /></a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Footer - bloc-89 END -->
 </div>
 <!-- Main container END -->
     

@@ -22,14 +22,13 @@ class Router
         if(!empty($_SERVER['REQUEST_URI'])){
             return trim($_SERVER['REQUEST_URI'],'/');
         }
-
     }
 
     public function run(){
         // Получаем строку запроса
         $uri = $this->getUri();
         // Проверяем наличие запроса
-
+        $result = null;
         foreach($this->routes as $uriPattern => $path){
             if (preg_match("~$uriPattern~",$uri)) { // посмотреть preg_match, есть баги с uri (dsfjshdjhomesdjhf - работает, home/ - не работает)
                 $segments = explode('/', $path);
@@ -55,7 +54,7 @@ class Router
             }
         }
         if ($result == null){
-            require_once (ROOT.'/404.html');
+            include_once (ROOT .'/views/errors/404.php');
         }
 
 
