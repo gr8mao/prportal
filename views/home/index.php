@@ -13,9 +13,7 @@ include_once ROOT . '/templates/header.php'; ?>
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
-                <img src="/img/logo-full.svg"
-                     class="center-block animLoopInfinite undefined pulse-hvr animated pulse animSpeedSlow mg-sm"
-                     height="400"/>
+                <img src="/img/logo-full.svg" class="center-block animLoopInfinite undefined pulse-hvr animated pulse animSpeedSlow mg-sm" height="400"/>
                 <h5 class="mg-md  text-center">
                     <i>Инновационный сайт для PR-специалистов</i>
                 </h5>
@@ -192,11 +190,8 @@ include_once ROOT . '/templates/header.php'; ?>
                 <div class="form-group">
                     <input class="form-control" type="password" placeholder="Пароль" id="input_1359" required/>
                 </div>
-                <a href="/home" class="a-btn a-block ltc-white">Забыли пароль?</a><a class="btn btn-d pull-right"
-                                                                                          onclick="scrollToTarget('#bloc-2')"
-                                                                                          data-placement="bottom"
-                                                                                          data-toggle="tooltip"
-                                                                                          title="Регистрация временно недоступна.">Регистрация</a>
+                <a href="/home" class="a-btn a-block ltc-white">Забыли пароль?</a>
+                <a class="btn btn-d pull-right" onclick="scrollToTarget('#bloc-2')" data-placement="bottom" data-toggle="tooltip" title="Регистрация временно недоступна.">Регистрация</a>
                 <a class="btn btn-d pull-left" href="/articles">Войти</a>
             </div>
         </div>

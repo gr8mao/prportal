@@ -25,6 +25,8 @@ class ArticleController
         $article_author = '';
 
 
+        $errors = [];
+
 
         if(isset($_POST['submit'])){
             $article_title = $_POST['title'];

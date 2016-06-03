@@ -70,7 +70,7 @@ include_once ROOT.'/templates/header.php'; ?>
                             </ul>
                         </div>
                         <?endif;?>
-                        <?if($errors == false):?>
+                        <?if($errors === false):?>
                             <div class="form-alert">
                                 <h4 class=" alert alert-success">Ваша статья успешно добавлена в базу!</h4>
                             </div>

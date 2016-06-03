@@ -18,7 +18,7 @@
                         <a href="#" class="a-btn a-block">Фильмы</a>
                     </li>
                     <li>
-                        <a href="#" class="a-btn a-block">Книги</a>
+                        <a href="/books" class="a-btn a-block">Книги</a>
                     </li>
                     <li>
                         <a href="/articles" class="a-btn a-block">Статьи</a>

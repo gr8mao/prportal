@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -15,9 +16,7 @@
     <script src="/js/jquery-2.1.0.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/blocs.min.js"></script>
-<!--    <script src="/js/jqBootstrapValidation.js"></script>-->
-<!--    <script src="/js/formHandler.js"></script>-->
-    <title><?echo $title?></title>
+    <title><?echo $title;?></title>
 
 </head>
 <body>
@@ -46,7 +45,7 @@
                             <a href="#">Фильмы</a>
                         </li>
                         <li>
-                            <a href="#">Книги</a>
+                            <a href="/books">Книги</a>
                         </li>
                         <li>
                             <a href="/articles">Статьи</a>

@@ -9,7 +9,6 @@
 
 $title = 'О портале | PR-портал';
 include_once ROOT . '/templates/header.php'; ?>
-
     <!-- bloc-22 -->
     <div class="bloc b-parallax l-bloc home-menu-bloc bgc-white bloc-fill-screen" id="bloc-22">
         <div class="container">
