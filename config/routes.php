@@ -11,5 +11,5 @@ return array(
     'articles/submit' => 'article/submit', // actionSubmit в ArticleController
     'articles' => 'article/index', //actionIndex в ArticleController
     'about' => 'home/about', // actionAbout в HomeController
-    'home' => 'home/index' // actionIndex в HomeController
+    '' => 'home/index' // actionIndex в HomeController
 );
