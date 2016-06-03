@@ -8,7 +8,7 @@
  */
 class Books
 {
-    const COUNT_BY_DEFAULT = 8;
+    const COUNT_BY_DEFAULT = 8; // проверить константы
 
     public static function getLatestBooks($count = 8){
         $db = Db::getConnection();
