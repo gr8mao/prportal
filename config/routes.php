@@ -7,6 +7,8 @@
  */
 
 return array(
+    'events' => 'events/index', // actionIndex в EventsController
+    'movies' => 'movies/index', // actionIndex в MoviesController
     'books' => 'books/index', // actionIndex в BooksController
     'articles/submit' => 'article/submit', // actionSubmit в ArticleController
     'articles' => 'article/index', //actionIndex в ArticleController

@@ -36,13 +36,13 @@
                 <div class="navbar-collapse navbar-1 collapse">
                     <ul class="site-navigation nav navbar-nav list-sp-md list-unstyled" id="menu">
                         <li>
-                            <a href="/home">Студенческий PR-портал</a>
+                            <a href="/home">Главная</a>
                         </li>
                         <li>
-                            <a href="#">События</a>
+                            <a href="/events">События</a>
                         </li>
                         <li>
-                            <a href="#">Фильмы</a>
+                            <a href="/movies">Фильмы</a>
                         </li>
                         <li>
                             <a href="/books">Книги</a>

@@ -1,6 +1,6 @@
 
 # BEGIN WordPress
-#<IfModule mod_rewrite.c>
+<IfModule mod_rewrite.c>
 AddDefaultCharset utf-8
 
  RewriteEngine On
@@ -9,8 +9,8 @@ AddDefaultCharset utf-8
 # RewriteRule ^index\.php$ - [L]
  RewriteCond %{REQUEST_FILENAME} !-f
  RewriteCond %{REQUEST_FILENAME} !-d
-#  RewriteRule . /pr/index.php [L]
+# RewriteRule . /pr/index.php [L]
  RewriteRule ^(.*)$ index.php
-# </IfModule>
+ </IfModule>
 
 # END WordPress
