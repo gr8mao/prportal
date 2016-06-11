@@ -6,7 +6,7 @@
  * Time: 17:11
  */
 
-$title = "Страница не найдена";
+$title = "Ошибка сервера";
 include_once ROOT . '/templates/header.php';
 ?>
 
@@ -16,7 +16,7 @@ include_once ROOT . '/templates/header.php';
         <div class="row voffset-md">
             <div class="col-sm-12">
                 <h1 class="tc-white text-center mg-lg">
-                    Такой страницы не существует.
+                    Внутренняя ошибка сервера
                 </h1>
                 <div class="text-center">
                     <a href="/" class="btn  btn-d  btn-lg">Вернуться к разделам</a>

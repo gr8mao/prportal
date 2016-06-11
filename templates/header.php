@@ -28,7 +28,7 @@
         <div class="container">
             <nav class="navbar row">
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="/home" id="logo-top"><img src="/img/pr_horiz.svg" alt="logo" height="50" /></a>
+                    <a class="navbar-brand" href="/" id="logo-top"><img src="/img/pr_horiz.svg" alt="logo" height="50" /></a>
                     <button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
                         <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                     </button>
@@ -36,7 +36,7 @@
                 <div class="navbar-collapse navbar-1 collapse">
                     <ul class="site-navigation nav navbar-nav list-sp-md list-unstyled" id="menu">
                         <li>
-                            <a href="/home">Главная</a>
+                            <a href="/">Главная</a>
                         </li>
                         <li>
                             <a href="/events">События</a>

@@ -19,7 +19,7 @@ include_once ROOT . '/templates/header.php';
                     Такой страницы не существует.
                 </h1>
                 <div class="text-center">
-                    <a href="/home" class="btn  btn-d  btn-lg">Вернуться к разделам</a>
+                    <a href="/" class="btn  btn-d  btn-lg">Вернуться к разделам</a>
                 </div>
             </div>
         </div>
@@ -27,7 +27,7 @@ include_once ROOT . '/templates/header.php';
     <div class="container">
         <div class="row voffset-lg">
             <div class="col-sm-12">
-                <img src="./img/pr_logo-white.svg" class="center-block animLoopInfinite undefined mg-sm animSpeedSlow"
+                <img src="/img/pr_logo-white.svg" class="center-block animLoopInfinite undefined mg-sm animSpeedSlow"
                      height="200"/>
             </div>
         </div>

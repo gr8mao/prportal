@@ -30,13 +30,16 @@ class Router
         // Проверяем наличие запроса
         $result = null;
         foreach($this->routes as $uriPattern => $path){
-            if (preg_match("~$uriPattern~",$uri)) { // посмотреть preg_match, есть баги с uri (dsfjshdjhomesdjhf - работает, home/ - не работает)
-                $segments = explode('/', $path);
+            if (preg_match("~^$uriPattern$~",$uri)) {
+                $internalRoute = preg_replace("~^$uriPattern$~",$path,$uri);
+
+                $segments = explode('/', $internalRoute);
 
                 $controllerName = ucfirst(array_shift($segments) . 'Controller');
                 $actionName = 'action' . ucfirst(array_shift($segments));
 
                 $parameters = $segments;
+
                 $controllerFile = ROOT . '/controllers/' . $controllerName . '.php';
 
                 if (file_exists($controllerFile)) {
@@ -46,15 +49,18 @@ class Router
 
                 $controllerObject = new $controllerName;
 
-                $result = call_user_func(array($controllerObject, $actionName), $parameters);
-
-                if ($result) {
-                    break;
+                if(method_exists($controllerObject,$actionName)) {
+                    $result = call_user_func_array(array($controllerObject, $actionName), $parameters);
+                    if ($result) {
+                        break;
+                    }
+                }else{
+                    header('Location: error/404');
                 }
             }
         }
         if ($result == null){
-            include_once (ROOT .'/views/errors/404.php');
+            header('Location: error/404');
         }
 
 

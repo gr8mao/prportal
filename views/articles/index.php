@@ -46,7 +46,7 @@ include_once ROOT . '/templates/header.php'; ?>
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-sm-1">
-                                <img src="img/placeholder-user.png"
+                                <img src="/img/placeholder-user.png"
                                      class="img-responsive img-circle hidden-xs hidden-sm"/>
                             </div>
                             <div class="col-sm-11">

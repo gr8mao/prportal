@@ -172,6 +172,7 @@ a,button{outline: none!important;} /* Prevent ugly blue glow on chrome and safar
 	border-color:rgba(255,255,255,1);
 }
 .d-bloc .panel{
+
 	color:rgba(0,0,0,.5);
 }
 .d-bloc .panel button:hover{
@@ -467,11 +468,16 @@ button{
 .panel{
 	border:0;
 	box-shadow: 0 0 2px rgba(0,0,0,.4);
+	/*height: 500px;*/
 }
 .panel-heading, .panel-footer{
 	background-color: inherit;
 	border-color: rgba(0,0,0,.1)!important;
+	/*height: 85%;*/
 }
+/*.panel img{*/
+	/*height: 75%;*/
+/*}*/
 .panel-sq, .panel-sq .panel-heading, .panel-sq .panel-footer{
 	border-radius:0;
 }

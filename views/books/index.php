@@ -7,7 +7,7 @@
  */
 
 $title = "Книги | PR-портал";
-include_once ROOT.'/templates/header.php'; ?>
+include_once ROOT . '/templates/header.php'; ?>
 
 <!-- bloc-10 -->
 <div class="bloc b-parallax l-bloc books-bloc bgc-white" id="bloc-10">
@@ -30,34 +30,33 @@ include_once ROOT.'/templates/header.php'; ?>
                 </h1>
             </div>
         </div>
-        <?if($books):?>
-        <div class="row voffset">
-            <?foreach($books as $book):?>
-            <div class="col-sm-3" >
-                <div class="panel" height="200px">
-                    <div class="panel-heading" id="movie3">
-                        <a href="#"><img src="/img/books/book<?echo $book['id'];?>.jpg" class="mg-sm center-block img-responsive" id="movie3cover" /></a>
-                        <form id="form_1069" novalidate>
-                            <div class="form-group">
-                                <label>
-                                    <?echo $book['Author'];?>
-                                </label>
+        <? if ($books): ?>
+            <div class="row voffset">
+                <? foreach ($books as $book): ?>
+                    <div class="col-sm-3">
+                        <div class="panel">
+                            <div class="panel-heading" id="movie3">
+                                <a href="#"><img src="/img/books/book<? echo $book['id']; ?>.jpg"
+                                                 class="mg-sm center-block img-responsive" id="movie3cover"/></a>
+                                <div class="form-group">
+                                    <label>
+                                        <? echo $book['Author']; ?>
+                                    </label>
+                                </div>
+                                <h4 class="mg-clear text-center">
+                                    <? echo $book['Title']; ?>
+                                </h4>
                             </div>
-                        </form>
-                        <h4 class="mg-clear text-center">
-                            <?echo $book['Title'];?>
-                        </h4>
-                    </div>
-                    <div class="panel-body">
-                        <div class="text-center">
-                            <a href="#" class="btn  btn-d btn-rd" id="movie3button">Подробнее...</a>
+                            <div class="panel-body">
+                                <div class="text-center">
+                                    <a href="#" class="btn  btn-d btn-rd" id="movie3button">Подробнее...</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                <? endforeach; ?>
             </div>
-            <?endforeach;?>
-        </div>
-        <?else:?>
+        <? else: ?>
             <div class="row voffset-lg">
                 <div class="col-sm-12">
                     <h4 class="mg-md text-center tc-white">
@@ -65,9 +64,9 @@ include_once ROOT.'/templates/header.php'; ?>
                     </h4>
                 </div>
             </div>
-        <?endif;?>
+        <? endif; ?>
     </div>
 </div>
 <!-- bloc-10 END -->
 
-<? include_once ROOT.'/templates/footer.php';?>
+<? include_once ROOT . '/templates/footer.php'; ?>

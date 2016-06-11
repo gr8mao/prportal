@@ -8,5 +8,8 @@
  */
 class ErrorController
 {
-
+    public function actionExecute($err_code) {
+        include_once ROOT."/views/errors/$err_code.php";
+        return true;
+    }
 }
