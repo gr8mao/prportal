@@ -31,7 +31,7 @@ class Router
         $result = null;
         foreach($this->routes as $uriPattern => $path){
             if (preg_match("~^$uriPattern$~",$uri)) {
-                $internalRoute = preg_replace("~^$uriPattern$~",$path,$uri);
+                $internalRoute = preg_replace(b"~^$uriPattern$~",$path,$uri);
 
                 $segments = explode('/', $internalRoute);
 
@@ -55,12 +55,12 @@ class Router
                         break;
                     }
                 }else{
-                    header('Location: error/404');
+                    header('Location: /error/404');
                 }
             }
         }
         if ($result == null){
-            header('Location: error/404');
+            header('Location: /error/404');
         }
 
 

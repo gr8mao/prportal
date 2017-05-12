@@ -13,6 +13,15 @@ include_once ROOT.'/templates/header.php'; ?>
     <div class="container">
         <div class="row">
             <img src="/img/pr_logo-white.svg" class="img-responsive center-block mg-md" width="100" />
+            <?if($errors):?>
+                <div class="col-xs-4 col-xs-offset-4 form-alert">
+                    <ul type="none" class="alert alert-danger">
+                        <?foreach($errors as $error):?>
+                            <li class="alert-danger"><?echo $error?></li>
+                        <?endforeach;?>
+                    </ul>
+                </div>
+            <?endif;?>
             <form class="col-xs-4 col-xs-offset-4" action="#" method="post">
                 <div class="form-group">
                     <input class="form-control" placeholder="Почта" required type="email" name="email" />

@@ -8,15 +8,18 @@
  */
 class HomeController
 {
-    public function actionIndex(){
+    public function actionIndex()
+    {
 
-        require_once (ROOT.'/views/home/index.php');
+        require_once(ROOT . '/views/home/index.php');
         return true;
     }
 
-    public function actionAbout(){
 
-        require_once (ROOT.'/views/home/about.php');
+    public function actionAbout()
+    {
+
+        require_once(ROOT . '/views/home/about.php');
         return true;
     }
 }

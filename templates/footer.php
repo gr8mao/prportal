@@ -77,8 +77,9 @@
             </div>
             <div class="col-sm-4">
                 <p class="text-left text-right mg-sm">
-                    <strong>Разработка сайта:<br />VICIS Design</strong>
-                </p><a href="http://vicis.ru/" target="_blank"><img src="/img/VICIS.svg" class="img-responsive pull-right mg-md" width="50" /></a>
+                    <strong>Дизайн:<br /> Глеб Юрьев<br /></strong>
+                    <strong>Техническая часть:<br />Белов Максим</strong>
+                </p>
             </div>
         </div>
     </div>

@@ -20,8 +20,10 @@ include_once ROOT . '/templates/header.php'; ?>
                         </h1>
                     </div>
                     <div class="col-sm-6">
+                        <?if(!Users::isGuest()):?>
                         <a href="articles/submit" class="btn    btn-lg pull-right btn-white hidden-xs"><span
                                 class="feather-icon icon-plus icon-spacer"></span>Добавить статью</a>
+                        <?endif;?>
                     </div>
                 </div>
             </div>
@@ -46,14 +48,14 @@ include_once ROOT . '/templates/header.php'; ?>
                     <div class="panel-heading">
                         <div class="row">
                             <div class="col-sm-1">
-                                <img src="/img/placeholder-user.png"
+                                <img src="<?echo Users::getProfilePhotoById($article['Added_By']);?>"
                                      class="img-responsive img-circle hidden-xs hidden-sm"/>
                             </div>
-                            <div class="col-sm-11">
+                            <div class="col-sm-10">
                                 <form id="form_2572" novalidate>
                                     <div class="form-group">
                                         <label>
-                                            <?echo $article['Author'];?>
+                                            <?echo Users::getUsernameById($article['Added_By']);?>
                                         </label>
                                     </div>
                                 </form>
@@ -61,6 +63,13 @@ include_once ROOT . '/templates/header.php'; ?>
                                     <?echo $article['Title'];?>
                                 </h3>
                             </div>
+                            <? if (Users::checkUserAdmin(Users::checkLogged())): ?>
+                                <div class="col-sm-1">
+                                <a href="/admin/article/delete<? echo $article['id'] ?>"
+                                   class="btn btn-lg pull-right btn-white hidden-xs">
+                                    <span class="feather-icon icon-cross icon-spacer"></span></a>
+                                </div>
+                            <? endif; ?>
                         </div>
                     </div>
                     <div class="panel-body">

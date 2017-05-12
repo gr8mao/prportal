@@ -19,8 +19,10 @@ include_once ROOT . '/templates/header.php'; ?>
                 </h1>
             </div>
             <div class="col-sm-6">
-                <a href="#" class="btn btn-lg pull-right btn-white hidden-xs">
+                <? if (!Users::isGuest()): ?>
+                <a href="/books/submit" class="btn btn-lg pull-right btn-white hidden-xs">
                     <span class="feather-icon icon-plus icon-spacer"></span>Добавить книгу</a>
+                <?endif;?>
             </div>
         </div>
         <div class="row voffset">
@@ -36,7 +38,7 @@ include_once ROOT . '/templates/header.php'; ?>
                     <div class="col-sm-3">
                         <div class="panel">
                             <div class="panel-heading" id="movie3">
-                                <a href="#"><img src="/img/books/book<? echo $book['id']; ?>.jpg"
+                                <a href="#"><img src="<? echo $book['image_path']; ?>"
                                                  class="mg-sm center-block img-responsive" id="movie3cover"/></a>
                                 <div class="form-group">
                                     <label>
@@ -49,7 +51,8 @@ include_once ROOT . '/templates/header.php'; ?>
                             </div>
                             <div class="panel-body">
                                 <div class="text-center">
-                                    <a href="#" class="btn  btn-d btn-rd" id="movie3button">Подробнее...</a>
+                                    <a href="/books/id<? echo $book['id']; ?>" class="btn  btn-d btn-rd"
+                                       id="movie3button">Подробнее...</a>
                                 </div>
                             </div>
                         </div>

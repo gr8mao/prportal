@@ -30,24 +30,6 @@ include_once ROOT.'/templates/header.php'; ?>
                         </p>
                         <form id="form" method="post" action="#">
                             <div class="form-group">
-                                <label for="author">
-                                    Ваше имя и фамилия
-                                </label>
-                                <input id="author" name="author" type="text" class="form-control" required/>
-                            </div>
-                            <div class="form-group">
-                                <label for="group">
-                                    Ваша учебная группа
-                                </label>
-                                <input id="group" name="group" class="form-control" type="text"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="email">
-                                    Ваш Email
-                                </label>
-                                <input class="form-control" type="email" required id="email" name="email"/>
-                            </div>
-                            <div class="form-group">
                                 <label for="title">
                                     Заголовок статьи
                                 </label>

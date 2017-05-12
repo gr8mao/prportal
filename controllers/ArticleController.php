@@ -11,7 +11,7 @@ class ArticleController
 
     public function actionIndex(){
 
-        $articles = Article::getArticles();
+        $articles = Article::getApprovedArticles();
 
         require_once (ROOT.'/views/articles/index.php');
 
@@ -20,39 +20,37 @@ class ArticleController
 
     public function actionSubmit(){
 
-        $article_title = '';
-        $article_content = '';
-        $article_author = '';
+        if(!Users::isGuest()) {
+            $errors = [];
 
+            if (isset($_POST['submit'])) {
+                $article_title = $_POST['title'];
+                $article_content = $_POST['content'];
 
-        $errors = [];
+                $errors = false;
 
+                if ($article_title == '') {
+                    $errors[] = 'Заголовое статьи не заполнен';
+                }
 
-        if(isset($_POST['submit'])){
-            $article_title = $_POST['title'];
-            $article_content = $_POST['content'];
-            $article_author = $_POST['author'];
+                if ($article_content == '') {
+                    $errors[] = 'Не заполнена статья';
+                }
 
-            $errors = false;
+                if(!Users::checkLastModify(Users::checkLogged(),'Articles'))
+                {
+                    $errors[] = 'Вы недавно отправляли сообщение. Это можно делать раз в 5 минут.';
+                }
 
-            if($article_title == '') {
-                $errors[] = 'Заголовое статьи не заполнен';
+                if ($errors == false) {
+                    Article::saveArticle($article_title, $article_content, Users::checkLogged());
+                }
             }
 
-            if($article_author == ''){
-                $errors[] = 'Заполните поле "Имя и фамилия"';
-            }
-
-            if($article_content == ''){
-                $errors[] = 'Не заполнена статья';
-            }
-
-            if($errors == false){
-                Article::saveArticle($article_title,$article_content,$article_author);
-            }
+            require_once ROOT . '/views/articles/submit.php';
+            return true;
         }
-
-        require_once ROOT.'/views/articles/submit.php';
+        header('Location: /error/401');
         return true;
     }
 
